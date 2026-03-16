@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Fiszki — aplikacja do efektywnej nauki z fiszkami. Twórz talie, dodawaj fiszki i ucz się z animacjami." />
+    <title>Fiszki — Ucz się efektywnie</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      (function() {
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'F12') {
+            e.preventDefault();
+            return false;
+          }
+          if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) {
+            e.preventDefault();
+            return false;
+          }
+          if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
+            e.preventDefault();
+            return false;
+          }
+        });
+
+        document.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+          return false;
+        });
+
+        (function wykryjDevTools() {
+          var prog = /./;
+          prog.toString = function() {
+            document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#121218;color:#6c5ce7;font-family:Inter,sans-serif;font-size:1.5rem;font-weight:700;text-align:center;padding:2rem;">🔒 Dostęp zabroniony</div>';
+          };
+          setInterval(function() {
+            console.log('%c', prog);
+          }, 2000);
+        })();
+      })();
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
