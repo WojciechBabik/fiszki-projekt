@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --kolor-glowny: #6c5ce7;
+  --kolor-glowny-jasny: #a29bfe;
+  --kolor-tlo: #121218;
+  --kolor-tlo-karta: #1c1c28;
+  --kolor-tlo-powierzchnia: #16161f;
+  --kolor-tekst: #e0e0e6;
+  --kolor-tekst-przyciszony: #a0a0b5;
+  --kolor-obramowanie: #2c2c3e;
+  --promien: 10px;
+  --promien-maly: 6px;
+}
+
+.text-muted {
+  color: var(--kolor-tekst-przyciszony) !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--kolor-tlo);
+  color: var(--kolor-tekst);
+  min-height: 100vh;
+}
+
+.pasek-nawigacji {
+  background: var(--kolor-tlo-karta) !important;
+  border-bottom: 1px solid var(--kolor-obramowanie);
+  padding: 0.5rem 0;
+}
+
+.marka-nawigacji {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--kolor-glowny-jasny) !important;
+  -webkit-text-fill-color: var(--kolor-glowny-jasny);
+}
+
+.email-uzytkownika {
+  color: var(--kolor-tekst-przyciszony);
+  font-size: 0.85rem;
+}
+
+.przycisk-wyloguj {
+  border-radius: 6px;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.8rem;
+  border-color: var(--kolor-obramowanie);
+}
+
+.przycisk-wyloguj:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.tlo-logowania {
+  min-height: 100vh;
+  background: var(--kolor-tlo);
+}
+
+.karta-logowania-wrapper {
+  width: 100%;
+  max-width: 420px;
+}
+
+.logo-logowania {
+  font-size: 2.5rem;
+  color: var(--kolor-glowny);
+  margin-bottom: 0.5rem;
+}
+
+.tytul-logowania {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--kolor-tekst);
+}
+
+.podtytul-logowania {
+  color: var(--kolor-tekst-przyciszony);
+  font-size: 0.9rem;
+}
+
+.karta-logowania {
+  background: var(--kolor-tlo-karta) !important;
+  border: 1px solid var(--kolor-obramowanie) !important;
+  border-radius: var(--promien) !important;
+}
+
+.zakladki-logowania .nav-link {
+  color: var(--kolor-tekst-przyciszony) !important;
+  border: none !important;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+}
+
+.zakladki-logowania .nav-link.active {
+  color: var(--kolor-glowny-jasny) !important;
+  background: transparent !important;
+  border-bottom: 2px solid var(--kolor-glowny) !important;
+}
+
+.pole-formularza {
+  background: var(--kolor-tlo-powierzchnia) !important;
+  border: 1px solid var(--kolor-obramowanie) !important;
+  border-radius: var(--promien-maly) !important;
+  color: var(--kolor-tekst) !important;
+  padding: 0.55rem 0.8rem;
+}
+
+.pole-formularza:focus {
+  border-color: var(--kolor-glowny) !important;
+  box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.15) !important;
+}
+
+.pole-formularza::placeholder {
+  color: var(--kolor-tekst-przyciszony) !important;
+}
+
+.form-label {
+  color: var(--kolor-tekst);
+  font-weight: 500;
+  font-size: 0.88rem;
+  margin-bottom: 0.35rem;
+}
+
+.przycisk-glowny {
+  background: var(--kolor-glowny) !important;
+  border: none !important;
+  border-radius: var(--promien-maly) !important;
+  font-weight: 600;
+  padding: 0.55rem 1.3rem;
+  color: #fff !important;
+}
+
+.przycisk-glowny:hover {
+  background: var(--kolor-glowny-jasny) !important;
+}
+
+.tytul-strony {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--kolor-tekst);
+}
+
+.karta-talii {
+  background: var(--kolor-tlo-karta) !important;
+  border: 1px solid var(--kolor-obramowanie) !important;
+  border-radius: var(--promien) !important;
+  transition: border-color 0.2s;
+}
+
+.karta-talii:hover {
+  border-color: var(--kolor-glowny) !important;
+}
+
+.tytul-talii {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--kolor-tekst);
+}
+
+.opis-talii {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--kolor-tekst-przyciszony);
+}
+
+.odznaka-liczba {
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.przyciski-talii .btn {
+  border-radius: var(--promien-maly);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.ikona-pusta {
+  font-size: 3.5rem;
+  opacity: 0.25;
+}
+
+.modal-fiszki .modal-content {
+  background: var(--kolor-tlo-karta) !important;
+  border: 1px solid var(--kolor-obramowanie) !important;
+  border-radius: var(--promien) !important;
+  color: var(--kolor-tekst);
+}
+
+.modal-fiszki .modal-header {
+  border-bottom: 1px solid var(--kolor-obramowanie);
+}
+
+.modal-fiszki .modal-footer {
+  border-top: 1px solid var(--kolor-obramowanie);
+}
+
+.modal-fiszki .modal-title {
+  font-weight: 600;
+}
+
+.modal-fiszki .btn-close {
+  filter: invert(1);
+}
+
+.karta-sekcja {
+  background: var(--kolor-tlo-karta) !important;
+  border: 1px solid var(--kolor-obramowanie) !important;
+  border-radius: var(--promien) !important;
+  overflow: hidden;
+}
+
+.naglowek-sekcji {
+  background: var(--kolor-tlo-powierzchnia) !important;
+  border-bottom: 1px solid var(--kolor-obramowanie) !important;
+  color: var(--kolor-tekst);
+  font-weight: 600;
+  padding: 0.7rem 1rem;
+}
+
+.element-listy {
+  background: transparent !important;
+  border-color: var(--kolor-obramowanie) !important;
+  color: var(--kolor-tekst);
+  padding: 0.65rem 1rem;
+}
+
+.element-listy:hover {
+  background: var(--kolor-tlo-powierzchnia) !important;
+}
+
+.numer-fiszki {
+  color: var(--kolor-tekst-przyciszony);
+  font-weight: 600;
+  font-size: 0.82rem;
+  min-width: 26px;
+}
+
+.tresc-fiszki-lista {
+  font-size: 0.9rem;
+}
+
+.separator-fiszki {
+  color: var(--kolor-glowny-jasny);
+  font-weight: 700;
+}
+
+.przycisk-powrot {
+  color: var(--kolor-glowny-jasny) !important;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.przycisk-powrot:hover {
+  color: var(--kolor-tekst) !important;
+}
+
+.strona-nauki {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.tytul-sesji {
+  font-weight: 700;
+  color: var(--kolor-tekst);
+}
+
+.odznaka-statystyka {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.35rem 0.7rem;
+  border-radius: 4px;
+}
+
+.pasek-postepu {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--kolor-tlo-powierzchnia);
+}
+
+.pasek-postepu .progress-bar {
+  background: #28a745;
+  border-radius: 3px;
+}
+
+.kontener-fiszki {
+  perspective: 1000px;
+  cursor: pointer;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.wnetrze-fiszki {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.wnetrze-fiszki.odwrocona {
+  transform: rotateY(180deg);
+}
+
+.strona-fiszki {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: var(--promien);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.przod-fiszki {
+  background: var(--kolor-tlo-karta);
+  border: 2px solid var(--kolor-obramowanie);
+}
+
+.tyl-fiszki {
+  background: var(--kolor-tlo-karta);
+  border: 2px solid var(--kolor-glowny);
+  transform: rotateY(180deg);
+}
+
+.etykieta-strony {
+  position: absolute;
+  top: 0.8rem;
+  left: 1rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--kolor-tekst-przyciszony);
+}
+
+.tresc-fiszki {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.4;
+  color: var(--kolor-tekst);
+  word-break: break-word;
+}
+
+.podpowiedz-klikniecia {
+  position: absolute;
+  bottom: 0.8rem;
+  font-size: 0.7rem;
+  color: var(--kolor-tekst-przyciszony);
+  opacity: 0.4;
+}
+
+.wrapper-animacji {
+  transition: all 0.25s ease;
+}
+
+.wrapper-animacji.wyjscie-prawo {
+  transform: translateX(80px);
+  opacity: 0;
+}
+
+.wrapper-animacji.wyjscie-lewo {
+  transform: translateX(-80px);
+  opacity: 0;
+}
+
+.przyciski-nauki .btn {
+  border-radius: 8px;
+  padding: 0.7rem 1.8rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  min-width: 150px;
+}
+
+.przycisk-odwroc {
+  background: var(--kolor-glowny) !important;
+  border: none !important;
+  color: white !important;
+}
+
+.przycisk-odwroc:hover {
+  background: var(--kolor-glowny-jasny) !important;
+}
+
+.przycisk-znam {
+  border: none !important;
+}
+
+.przycisk-nie-znam {
+  border: none !important;
+}
+
+.strona-podsumowania {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.ikona-podsumowania {
+  font-size: 4rem;
+}
+
+.tytul-podsumowania {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--kolor-tekst);
+}
+
+.podtytul-podsumowania {
+  font-size: 1rem;
+}
+
+.wiadomosc-podsumowania {
+  font-size: 1rem;
+  color: var(--kolor-tekst);
+  font-weight: 500;
+}
+
+.karta-statystyka {
+  background: var(--kolor-tlo-karta) !important;
+  border: 1px solid var(--kolor-obramowanie) !important;
+  border-radius: var(--promien) !important;
+}
+
+.wartosc-statystyki {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.etykieta-statystyki {
+  font-size: 0.75rem;
+  color: var(--kolor-tekst-przyciszony);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.alert {
+  border-radius: var(--promien-maly);
+  border: none;
+  font-size: 0.88rem;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--kolor-tlo);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--kolor-obramowanie);
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .wnetrze-fiszki {
+    height: 230px;
+  }
+
+  .tresc-fiszki {
+    font-size: 1.15rem;
+  }
+
+  .przyciski-nauki .btn {
+    min-width: 120px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.88rem;
+  }
+
+  .tytul-strony {
+    font-size: 1.2rem;
+  }
+
+  .wartosc-statystyki {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .przyciski-nauki {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .przyciski-nauki .btn {
+    min-width: unset;
+  }
+}
+
+.heatmap-container {
+  background: var(--kolor-tlo-karta);
+  border: 1px solid var(--kolor-obramowanie);
+  border-radius: var(--promien);
+  padding: 1rem;
+}
+
+.heatmap-kafelek {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background-color: var(--kolor-tlo-powierzchnia);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.heatmap-kafelek:hover {
+  transform: scale(1.2);
+}
+
+.poziom-0 {
+  background-color: var(--kolor-tlo-powierzchnia);
+}
+
+.poziom-1 {
+  background-color: rgba(40, 167, 69, 0.4);
+}
+
+.poziom-2 {
+  background-color: rgba(40, 167, 69, 0.7);
+}
+
+.poziom-3 {
+  background-color: #28a745;
+}
+
+.streak-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.streak-fire {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.streak-number {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--kolor-tekst-przyciszony);
+  text-transform: uppercase;
+  margin-top: -2px;
+}
