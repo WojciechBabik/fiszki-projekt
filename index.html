@@ -30,16 +30,6 @@
           e.preventDefault();
           return false;
         });
-
-        (function wykryjDevTools() {
-          var prog = /./;
-          prog.toString = function() {
-            document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#121218;color:#6c5ce7;font-family:Inter,sans-serif;font-size:1.5rem;font-weight:700;text-align:center;padding:2rem;">🔒 Dostęp zabroniony</div>';
-          };
-          setInterval(function() {
-            console.log('%c', prog);
-          }, 2000);
-        })();
       })();
     </script>
     <script type="module" src="/src/main.jsx"></script>
